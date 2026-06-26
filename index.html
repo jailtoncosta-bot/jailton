@@ -1,1 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CultivaEconomia - Agricultura Familiar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <header>
+        <div class="header-container">
+            <h1>🌱 CultivaEconomia</h1>
+            <p>Descubra o quanto você economiza investindo na produção sustentável e na agricultura familiar</p>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <section class="intro">
+            <h2>Por que calcular sua economia?</h2>
+            <p>Reduzir o uso de fertilizantes químicos comerciais e substituí-los por compostagem caseira ou insumos orgânicos melhora a saúde da sua terra e alivia o seu bolso. Utilize o simulador abaixo para estimar o seu ganho real mensal e anual!</p>
+        </section>
+
+        <section class="calculadora-box">
+            <h2>Simulador de Custos & Economia</h2>
+            
+            <div class="form-group">
+                <label for="gasto-quimico">Gasto mensal atual com Fertilizantes/Insumos Químicos (R$):</label>
+                <input type="number" id="gasto-quimico" placeholder="Ex: 500" min="0" step="0.01">
+            </div>
+
+            <div class="form-group">
+                <label for="gasto-organico">Custo estimado mensal com Insumos Orgânicos/Compostagem (R$):</label>
+                <input type="number" id="gasto-organico" placeholder="Ex: 150" min="0" step="0.01">
+            </div>
+
+            <button onclick="calcularEconomia()">Calcular Economia Real</button>
+
+            <div id="resultado" class="resultado-container hidden">
+                <h3>💰 Resultado da sua Estimativa</h3>
+                <div class="card-resultado">
+                    <p>Economia Mensal: <strong id="economia-mensal" class="positivo">R$ 0,00</strong></p>
+                    <p>Economia Anual Projetada: <strong id="economia-anual" class="positivo-destaque">R$ 0,00</strong></p>
+                </div>
+                <div class="dica-box">
+                    <p id="mensagem-dica"></p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 CultivaEconomia - Incentivando a Agricultura Familiar Sustentável.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
